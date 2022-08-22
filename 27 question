@@ -1,0 +1,15 @@
+f=open('27-B_1.txt')
+n=int(f.readline())
+s=0
+k=2000000
+for i in range(0,n):
+    a,b=map(int,f.readline().split())
+    s+=max(a,b)
+    g=abs(a-b)
+    if k>g:
+        k=g
+if s%5!=0:
+    print(s)
+else:
+    print(s-k)
+    
