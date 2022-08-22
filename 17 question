@@ -1,0 +1,8 @@
+f=open('17.txt')
+s=[int(i) for i in f]
+k=[]
+for i in range(len(f)-1):
+    for j in range(i+1,len(f)):
+        if (i+j)%8 ==0:
+            k.append(i+j)
+print(len(k),max(k))
