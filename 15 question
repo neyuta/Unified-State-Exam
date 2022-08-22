@@ -1,0 +1,13 @@
+def f (a1,a2,x): 
+return ((4 <= x <= 15) and (12 <= x <= 20) <= (a1 <= x <= a2)) 
+s=[] 
+for a1 in range (-100,100): 
+for a2 in range(-100,100): 
+y = True 
+for x in range(-100,100): 
+if not (f(a1,a2,x)): 
+y = False 
+break 
+if y: 
+s.append(a2-a1) 
+print(min(s))
